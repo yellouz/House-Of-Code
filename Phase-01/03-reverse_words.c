@@ -36,7 +36,7 @@ void reverse_string(char str [])
     }
 }
 
-void reverse_word_in_string(char str[], int word_start, int word_end)
+void reverse_word(char str[], int word_start, int word_end)
 {
     char word[20];
     int word_index = 0;
@@ -71,7 +71,7 @@ void reverse_words(char str [])
         if (str[i] == ' ' || str[i] == '\0')
         {
             end_of_word = i-1;
-            reverse_word_in_string(str, start_of_word, end_of_word);
+            reverse_word(str, start_of_word, end_of_word);
 
             //this is the start of the next word
             start_of_word = i+1;
