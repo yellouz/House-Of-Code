@@ -50,8 +50,8 @@ char *tome_reader(int fd)
         return NULL;
     }
     
-    int line_index = 0;
-    int found_newline = 0;
+    int line_index = 0; // this variable will keep track of the line index where to start copying buffer to
+    int found_newline = 0; // this is a boolezn variable that stores the information that we've successfully read a line or not yet
     
     // If buffer contains data from previous read copy it first
     if (buffer[0] != '\0') 
